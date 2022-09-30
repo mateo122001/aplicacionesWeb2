@@ -1,7 +1,11 @@
 
-
+/*Primero se llama a la función recorrerArray y se envia el argumento "1" */
 
 recorrerArray(1)
+
+
+/*La función recorrerArray permite a través de un switch elegir el array 
+que se desea recorrer, ya sea, el arrayIdiomas, arrayInstructores o el arrayAprendizaje */
 
 
 function recorrerArray(opcion){
@@ -21,6 +25,14 @@ function recorrerArray(opcion){
 
     }
 }
+
+
+
+
+ /*La función arrayIdiomas recibe un argumento y si este argumento recibido es el número 1
+ se recorrerá el array que esta funcion contiene llamado "idiomas" con un bucle for of,
+ si el argumento es 2 se recorrerá usando un bucle for in y si es 3 se recorrerá usando un foreach*/
+
 
 
  function arrayIdiomas(tipoDeCiclo){
@@ -89,7 +101,9 @@ switch(tipoDeCiclo){
 
 
 
-
+ /*La función arrayInstructores recibe un argumento y si este argumento recibido es el número 1
+ se recorrerá el array que esta funcion contiene llamado "instructores" con un bucle for of,
+ si el argumento es 2 se recorrerá usando un bucle for in y si es 3 se recorrerá usando un foreach*/
 
 
 
