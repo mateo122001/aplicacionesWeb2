@@ -1,5 +1,7 @@
 
-
+ /*La función arrayAprendizaje recibe un argumento y si este argumento recibido es el número 1
+ se recorrerá el array que esta funcion contiene llamado "Aprendizaje" con un bucle for of,
+ si el argumento es 2 se recorrerá usando un bucle for in y si es 3 se recorrerá usando un foreach*/
  
  
  function arrayAprendizaje(tipoDeCiclo){
