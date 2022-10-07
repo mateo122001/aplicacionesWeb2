@@ -80,6 +80,15 @@ entidades en su problema).*/
         hora:"9 Am",
         numeroHorasCurso:24,
         nivel: "A1"
+    },
+   {
+        idAprendizaje:5,
+        idIdioma:5,
+        idInstructor:5,
+        fecha:{dia:20, mes:10, año:2022},
+        hora:"9 Am",
+        numeroHorasCurso:24,
+        nivel: "A1"
     }
     ]
 
@@ -108,74 +117,3 @@ module.exports=arreglos
 
 
 
-/* PROMESAS
-
-
-function mostrarElemento(idElemento){
-    return new Promise((resolved, reject)=>{
-        const encontrado=Aprendizaje.find((elemento)=>{
-        return elemento.idAprendizaje==idElemento
-         
-        })
-
-        resolved(encontrado)
-    })
-}
-
-
-function mostrarEntidad(elementoEncontrado){
-    return new Promise((resolved, reject)=>{
-     const encontrado2=instructores.find((elemento)=>{
-        return elemento.idInstructor==elementoEncontrado.idInstructor
-     })
-
-     resolved(encontrado2)
-    })
-}
-
-
-
-mostrarElemento(1).then((resp)=>{
-    console.log("Elemento del arreglo de objetos transaccional: ")
-    console.log(resp)
-    return mostrarEntidad(resp)
-
-}).then((resp)=>{
-    console.log("Datos de la entidad relacionada: ")
-    console.log(resp)
-})
-*/
-
-
-
-
-
-
-
-/*CALLBACKS
-
-
-    function mostrarElemento(idElemento, mostrarEntidad ){
-
-        const encontrado=Aprendizaje.find((elemento)=>{
-            return elemento.idAprendizaje==idElemento
-        })
-        console.log("Elemento del arreglo de objetos transaccional: ")
-        console.log(encontrado)
-        mostrarEntidad(encontrado)
-
-
-    }
-
-
-    function mostrarEntidad(elementoEncontrado){
-        const encontrado2=instructores.find((elemento)=>{
-            return elemento.idInstructor==elementoEncontrado.idInstructor
-        })
-        console.log("Datos de la entidad relacionada: ")
-        console.log(encontrado2)
-    }
-
-    mostrarElemento(2, mostrarEntidad) 
-
-*/
