@@ -4,6 +4,7 @@ const urlConnection="mongodb+srv://mateoparraga17:gostosaArlene@cluster0.6minr6o
 
 async function crudAprendizaje(){
     
+    try{
 
     const establishConnection=await mongoose.connect(urlConnection)
     
@@ -30,6 +31,10 @@ async function crudAprendizaje(){
     console.log(`Los elementos disponibles en esta entidad o modelo son:`)
     for(i of results){
     console.log(i)
+    }
+        
+    }catch(error){
+    console.log("Se produjo un error", error)
     }
 }
 
