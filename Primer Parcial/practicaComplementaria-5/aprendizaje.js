@@ -42,7 +42,7 @@ app.post('/', (req,res)=>{
     })
 })
 app.put('/', (req,res)=>{
-    const {identification, idIdioma, idInstructor,fecha } = req.body;
+    const {identification, idIdioma, idInstructor,fecha, hora,numeroHorasCurso, nivel  } = req.body;
     
  
     
