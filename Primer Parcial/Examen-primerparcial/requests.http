@@ -1,0 +1,14 @@
+POST  http://localhost:9000/api/aprendizajes HTTP/1.1
+Content-Type: application/json
+
+{
+"idIdioma":"235f58548a1e4621c08bb755",
+"idInstructor":"435f589c8a1e4621c08bb75k",
+"fecha":"15 de noviembre 2022",
+"hora":"13 Am",
+    "duracion":"72 horas",
+    "nivel": "Básic"
+}
+
+###
+GET http://localhost:9000/api/aprendizajes HTTP/1.1
