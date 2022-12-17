@@ -1,0 +1,18 @@
+version: "3"
+services:
+  web:
+    container_name: api-mongo
+    restart: always
+    build: .
+    environment:
+      - PORT=1000
+      - MONGODB_CNN=mongodb://mongo:27017/Academy
+    ports:
+      - "2000:1000"
+    links: 
+      - mongo
+  mongo:
+    container_name: mimongo
+    image: mongo
+    ports: 
+      - "27017:27017"
