@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+
+  idiomas:
+    build: ./microservices/idioma-service
+    depends_on:
+            - mongoidi
+    environment:
+            - MONGODB_CNN=mongodb://mongoidi:27017/idioma
+  mongoidi: 
+    container_name: mimongoidiomas
+    image: mongo
+    ports: 
+        - "27017:27017"
+
+
+  instructores:
+    build: ./microservices/instructor-service
+    depends_on:
+          - mongoins
+    environment:
+          - MONGODB_URI=mongodb://mongoins:27017/instructor
+  mongoins: 
+      container_name: mimongoinstructores
+      image: mongo
+      ports: 
+        - "27018:27017"
+
+  nginx:
+      image: nginx:latest
+      ports:
+        - "8080:8080"
+      volumes:
+        - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      depends_on:
+        - idiomas
+        - instructores
+
+
+    
